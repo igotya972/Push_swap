@@ -6,7 +6,7 @@
 /*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 08:32:01 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/05 19:43:49 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/05 20:53:56 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,8 @@ void	ft_algo_choice(t_list *groot)
 		exit(EXIT_SUCCESS);
 	if (i <= 3)
 	{
-		ft_algo(groot);
 		printf("1OK\n");
+		ft_algo(groot);
 	}
 	
 	else if (i <= 5)
@@ -96,7 +96,7 @@ void	ft_algo_choice(t_list *groot)
 	}
 	else if (i > 100)
 	{
-		ft_pre_sorting(groot, 35);
 		printf("4OK\n");
+		ft_pre_sorting(groot, 35);
 	}
 }

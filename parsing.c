@@ -6,7 +6,7 @@
 /*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 21:44:41 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/05 19:58:50 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/05 21:10:18 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,11 +120,11 @@ void	ft_parse_arguments(t_list *groot, int ac, char **av)
 	while (i < ac)
 	{
 		value = atoi(av[i]);
+		*av = *ft_split(av[1], 32);
 		insert_element(groot, value);
-		//av = ft_split(av[1], 32);
-		//ft_check_overflow(av, 1);
-		//ft_check_only_numbers(av, i);
-		//ft_check_double(groot);
+		ft_check_overflow(av, 1);
+		ft_check_only_numbers(av, i);
+		ft_check_double(groot);
 		i++;
 		//write(1, "Coucou\n", 7);
 	}
