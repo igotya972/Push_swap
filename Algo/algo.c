@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 08:32:01 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/05 20:53:56 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/06 01:48:12 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,23 +80,12 @@ void	ft_algo_choice(t_list *groot)
 		exit(EXIT_SUCCESS);
 	if (i <= 3)
 	{
-		printf("1OK\n");
 		ft_algo(groot);
 	}
-	
 	else if (i <= 5)
-	{
-		printf("2OK\n");
 		ft_algo2(groot);
-	}
 	else if (i <= 100)
-	{
-		printf("3OK\n");
 		ft_pre_sorting(groot, 20);
-	}
 	else if (i > 100)
-	{
-		printf("4OK\n");
 		ft_pre_sorting(groot, 35);
-	}
 }

@@ -6,7 +6,7 @@
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 04:05:59 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/05 19:17:48 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/05 23:36:42 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_error(void)
 {
-	write(2, "ERROR\n", 6);
+	write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }
 

@@ -6,7 +6,7 @@
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 15:15:02 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/04 05:40:37 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/06 01:46:24 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,30 +47,17 @@ void		rra(t_list *groot);
 void		rrb(t_list *groot);
 void		rrr(t_list *groot);
 
-/*
-	Parsing
-*/
-char		**ft_split(char const *s, char c);
-int			ft_atoi(const char *str);
+/*	
+Parsing
+	*/
 t_list		*initialization(void);
 int			main(int ac, char **av);
-t_list		*ft_checker(char **av, int ac);
-t_list		*ft_parsing(char **av, int ac);
-void		ft_push_stack_a(t_list *groot, int value, int index);
 void		ft_parse_arguments(t_list *groot, int ac, char **av);
-//void		delet_pile(t_list *list);
-
-/*
-	Affichage
-*/
-void		affichage(t_element **first);
-void		afficher(t_list *groot);
-void		afficher_pile_b(t_list *groot);
 void		insert_element(t_list *groot, int newValue);
 void		insert_element_pile_b(t_list *groot, int newValue);
 
 /*
-	Tri
+	Algo
 */
 int			ft_pos_big_value(t_list *groot, t_element *big_value);
 void		ft_pre_sorting(t_list *groot, int limit);
@@ -103,5 +90,7 @@ int			ft_lstsize(t_element *groot);
 size_t		ft_strlen(const char *s);
 int			ft_strcmp(char *s1, char *s2);
 t_element	*ft_lstnew(int value);
+char		**ft_split(char const *s, char c);
+int			ft_atoi(const char *str);
 
 #endif

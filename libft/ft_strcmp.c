@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 18:27:15 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/05 23:34:51 by dferjul          ###   ########.fr       */
+/*   Created: 2023/05/30 00:33:36 by dferjul           #+#    #+#             */
+/*   Updated: 2023/06/06 01:36:31 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	ft_atoi(const char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	i;
-	int	sign;
-	int	result;
+	size_t	i;
 
 	i = 0;
-	sign = 1;
-	result = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	while ((((unsigned char *)s1)[i] || ((unsigned char *)s2)[i]))
 	{
-		if (str[i] == '-')
-			sign *= -1;
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 		i++;
 	}
-	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
-	{
-		result += (str[i] - 48);
-		i++;
-		if (!(str[i] < '0' || str[i] > '9'))
-			result *= 10;
-	}
-	return (result * sign);
+	return (0);
 }

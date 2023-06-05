@@ -6,14 +6,13 @@
 #    By: dferjul <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/02 15:46:11 by dferjul           #+#    #+#              #
-#    Updated: 2023/06/04 17:07:09 by dferjul          ###   ########.fr        #
+#    Updated: 2023/06/06 01:37:29 by dferjul          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	=	main.c \
 			parsing.c \
 			indexage.c \
-			utils.c \
 			checker.c	\
 			Algo/algo.c	\
 			Algo/algo_bis.c	\
@@ -22,6 +21,7 @@ SRCS	=	main.c \
 			libft/ft_lstnew.c \
 			libft/ft_strlen.c \
 			libft/ft_lstsize.c \
+			libft/ft_strcmp.c \
 			Instructions/push.c \
 			Instructions/reverse_rotate.c \
 			Instructions/rotate.c \

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 01:19:21 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/05 21:03:18 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/05 23:22:07 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ char	**ft_split(char const *s, char c)
 		else
 			i++;
 	}
-	printf("OK-SPLIT");
 	tab[j] = NULL;
 	return (tab);
 }
