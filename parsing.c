@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 21:44:41 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/05 18:53:35 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/05 19:58:50 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*initialization(void)
 	t_list		*list;
 
 	list = malloc(sizeof(*list));
+	list->pile_a = NULL;
+	list->pile_b = NULL;
 	return (list);
 }
 
@@ -61,6 +63,7 @@ void	insert_element(t_list *groot, int newValue)
 		return ;
 	new->value = newValue;
 	new->next = NULL;
+	new->index = 0;
 	if (groot->pile_a)
 	{
 		n = groot->pile_a;
