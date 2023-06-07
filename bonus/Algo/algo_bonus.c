@@ -6,11 +6,11 @@
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 08:32:01 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 05:31:24 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 05:28:36 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../checker.h"
 
 void	ft_short_algo(t_list *groot)
 {

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 15:15:02 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 07:12:09 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 07:14:37 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef CHECKER_H
+# define CHECKER_H
 
 # include <unistd.h>
 # include <string.h>
@@ -19,6 +19,7 @@
 # include <stdio.h>
 # include <stdarg.h>
 # include <stdint.h>
+# include "get_next_line.h"
 
 typedef struct s_element
 {
@@ -32,6 +33,15 @@ typedef struct s_list
 	struct s_element	*pile_a;
 	struct s_element	*pile_b;
 }						t_list;
+
+/*
+BONUS
+*/
+int		ft_is_sorted(t_list *groot);
+void	ft_free_groot(t_list *groot);
+void	instructions(t_list *groot, char *line);
+void	ft_putstr_fd(char *str, int fd);
+int		main(int ac, char **av);
 
 /*
 	Instruction

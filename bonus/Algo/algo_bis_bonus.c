@@ -6,11 +6,11 @@
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 19:41:45 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 05:31:21 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 05:28:32 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../checker.h"
 
 t_element	*ft_big_value_sorting(t_list *groot)
 {
