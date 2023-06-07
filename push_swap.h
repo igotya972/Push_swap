@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 15:15:02 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 07:12:09 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 18:28:30 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdio.h>
 # include <stdarg.h>
 # include <stdint.h>
+# include <limits.h>
 
 typedef struct s_element
 {

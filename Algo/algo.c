@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 08:32:01 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 05:31:24 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 18:49:56 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,9 @@ void	ft_short_algo(t_list *groot)
 		if (groot->pile_a->index > groot->pile_a->next->index)
 			sa(groot);
 	}
-	else if (big_value->index == groot->pile_a->next->index)
+	if (groot->pile_a->index > groot->pile_a->next->index)
 	{
-		if (groot->pile_a->index > groot->pile_a->next->index)
-		{
-			sa(groot);
-		}
+		sa(groot);
 	}
 }
 
@@ -45,12 +42,15 @@ void	ft_short_algo2(t_list *groot)
 	int			i;
 
 	big_value = ft_index_big_value(groot);
-	while (groot->pile_a->next)
+	while (groot->pile_a->next->next)
 	{
-		if (big_value->index == groot->pile_a->index)
+		if (big_value->index == groot->pile_a->index || big_value->index - 1 == groot->pile_a->index)
 			ra(groot);
-		pb(groot);
+		else
+			pb(groot);
 	}
+	if (groot->pile_a->index > groot->pile_a->next->index)
+		sa(groot);
 	while (groot->pile_b != NULL)
 	{
 		big_value = ft_index_big_value_b(groot);

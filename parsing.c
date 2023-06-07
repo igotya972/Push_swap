@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 21:44:41 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/06 05:48:53 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 19:00:59 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,18 +44,6 @@ void	insert_element(t_list *groot, int newValue)
 		groot->pile_a = new;
 }
 
-void	insert_element_pile_b(t_list *groot, int newValue)
-{
-	t_element	*new;
-
-	new = malloc(sizeof(*new));
-	if (!new || !groot)
-		return ;
-	new->value = newValue;
-	new->next = groot->pile_b;
-	groot->pile_b = new;
-}
-
 void	ft_parse_arguments(t_list *groot, int ac, char **av)
 {
 	int	i;
@@ -64,8 +52,7 @@ void	ft_parse_arguments(t_list *groot, int ac, char **av)
 	i = 1;
 	while (i < ac)
 	{
-		value = atoi(av[i]);
-		*av = *ft_split(av[1], 32);
+		value = ft_atoi(av[i]);
 		insert_element(groot, value);
 		ft_check_overflow(av, 1);
 		ft_check_only_numbers(av, i);
