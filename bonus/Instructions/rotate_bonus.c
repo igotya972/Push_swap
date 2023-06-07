@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   rotate_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 18:38:22 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 05:28:55 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 19:24:03 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	ra(t_list *groot)
 		tmp->next = NULL;
 		groot->pile_a = first;
 	}
-	write(1, "ra\n", 3);
 }
 
 void	rb(t_list *groot)
@@ -51,12 +50,10 @@ void	rb(t_list *groot)
 		tmp->next = NULL;
 		groot->pile_b = first;
 	}
-	write(1, "rb\n", 3);
 }
 
 void	rr(t_list *groot)
 {
 	ra(groot);
 	rb(groot);
-	write(1, "rr\n", 3);
 }

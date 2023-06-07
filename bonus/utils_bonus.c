@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 06:48:55 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 07:15:05 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 19:44:34 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_is_sorted(t_list *groot)
 	t_element	*tmp;
 	t_element	*new;
 
+	if (groot->pile_a->next == NULL)
+		return (1);
 	tmp = groot->pile_a;
 	new = groot->pile_a->next;
 	while (new)

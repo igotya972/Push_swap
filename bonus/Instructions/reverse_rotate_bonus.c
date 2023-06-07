@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*   reverse_rotate_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 18:40:17 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 05:28:52 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 19:23:54 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	rra(t_list *groot)
 		tmp->next = groot->pile_a;
 		groot->pile_a = tmp;
 	}
-	write(1, "rra\n", 4);
 }
 
 void	rrb(t_list *groot)
@@ -51,12 +50,10 @@ void	rrb(t_list *groot)
 		tmp->next = groot->pile_b;
 		groot->pile_b = tmp;
 	}
-	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_list *groot)
 {
 	rra(groot);
 	rrb(groot);
-	write(1, "rrr\n", 4);
 }

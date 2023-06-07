@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 15:15:02 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 07:14:37 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 19:25:29 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,6 @@ t_list		*initialization(void);
 int			main(int ac, char **av);
 void		ft_parse_arguments(t_list *groot, int ac, char **av);
 void		insert_element(t_list *groot, int newValue);
-void		insert_element_pile_b(t_list *groot, int newValue);
-
 /*
 	Algo
 */

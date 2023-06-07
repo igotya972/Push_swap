@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 04:05:59 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 06:52:30 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 19:39:46 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	ft_error(void)
 {
-	t_list	*groot = NULL;
-	free(groot->pile_a);
-	free(groot->pile_a);
 	write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }
@@ -77,11 +74,11 @@ void	ft_check_overflow(char **av, int ac)
 		{
 			if (av[ac][0] == 45)
 			{
-				if (ft_strcmp(&(av[ac][i]), "-2147483648") >= 0)
+				if (ft_strcmp(&(av[ac][i]), "2147483648") > 0)
 					ft_error();
 			}
 			else
-				if (ft_strcmp(&(av[ac][i]), "2147483647") >= 0)
+				if (ft_strcmp(&(av[ac][i]), "2147483647") > 0)
 					ft_error();
 		}
 		else if (size > 10)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 18:38:28 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 07:15:21 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 19:23:47 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	pa(t_list *groot)
 		groot->pile_a = groot->pile_b;
 		groot->pile_b = tmp;
 	}
-	write(1, "pa\n", 3);
 }
 
 void	pb(t_list *groot)
@@ -37,5 +36,4 @@ void	pb(t_list *groot)
 		groot->pile_b = groot->pile_a;
 		groot->pile_a = tmp;
 	}
-	write(1, "pb\n", 3);
 }

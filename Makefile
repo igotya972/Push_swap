@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dferjul <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/02 15:46:11 by dferjul           #+#    #+#              #
-#    Updated: 2023/06/07 06:56:51 by dferjul          ###   ########.fr        #
+#    Updated: 2023/06/07 19:48:36 by dferjul          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,6 @@ SRCS	=	main.c \
 			Algo/algo.c	\
 			Algo/algo_bis.c	\
 			libft/ft_atoi.c \
-			libft/ft_split.c \
 			libft/ft_lstnew.c \
 			libft/ft_strlen.c \
 			libft/ft_lstsize.c \
@@ -37,7 +36,6 @@ SRCS_bonus	=	bonus/utils_bonus.c \
 				bonus/libft/ft_atoi_bonus.c \
 				bonus/libft/ft_split_bonus.c \
 				bonus/libft/ft_lstnew_bonus.c \
-				bonus/libft/ft_strlen_bonus.c \
 				bonus/libft/ft_lstsize_bonus.c \
 				bonus/libft/ft_strcmp_bonus.c \
 				bonus/Instructions/push_bonus.c \
@@ -67,6 +65,9 @@ all : $(NAME)
 
 $(NAME) : $(OBJS) 
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+$(Name_B) : $(OBJS_bonus) 
+	$(CC) $(CFLAGS) $(OBJS_bonus) -o $(Name_B)
 
 bonus	: $(NAME) $(OBJS_bonus)
 		$(CC) $(CFLAGS) $(OBJS_bonus) -o $(Name_B)

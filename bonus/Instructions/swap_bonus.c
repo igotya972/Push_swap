@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   swap_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 18:37:54 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 05:28:57 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/07 19:23:34 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	sa(t_list *groot)
 		tmp->next = groot->pile_a;
 		groot->pile_a = tmp;
 	}
-	write(1, "sa\n", 3);
 }
 
 void	sb(t_list *groot)
@@ -37,12 +36,10 @@ void	sb(t_list *groot)
 		tmp->next = groot->pile_b;
 		groot->pile_b = tmp;
 	}
-	write(1, "sb\n", 3);
 }
 
 void	ss(t_list *groot)
 {
 	sa(groot);
 	sb(groot);
-	write(1, "ss\n", 3);
 }
