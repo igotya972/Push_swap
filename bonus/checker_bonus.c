@@ -3,16 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   checker_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 21:44:34 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 19:39:33 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 01:03:46 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-static void ft_print_instructions(t_list *groot, char *line)
+static void	ft_exec_instructions_bis(t_list *groot, char *line)
+{
+	if (ft_strcmp(line, "rra\n") == 0)
+		rra(groot);
+	else if (ft_strcmp(line, "rrb\n") == 0)
+		rrb(groot);
+	else if (ft_strcmp(line, "rrr\n") == 0)
+		rrr(groot);
+	else
+	{
+		ft_putstr_fd("ERROR\n", 2);
+		free(line);
+		exit(EXIT_FAILURE);
+	}
+}
+
+static void	ft_exec_instructions(t_list *groot, char *line)
 {
 	if (ft_strcmp(line, "sa\n") == 0)
 		sa(groot);
@@ -30,18 +46,8 @@ static void ft_print_instructions(t_list *groot, char *line)
 		rb(groot);
 	else if (ft_strcmp(line, "rr\n") == 0)
 		rr(groot);
-	else if (ft_strcmp(line, "rra\n") == 0)
-			rra(groot);
-	else if (ft_strcmp(line, "rrb\n") == 0)
-		rrb(groot);
-	else if (ft_strcmp(line, "rrr\n") == 0)
-		rrr(groot);
-	else 
-	{
-		ft_putstr_fd("ERROR\n", 2);
-		free(line);
-		exit(EXIT_FAILURE);
-	}
+	else
+		ft_exec_instructions_bis(groot, line);
 }
 
 int	main(int ac, char **av)
