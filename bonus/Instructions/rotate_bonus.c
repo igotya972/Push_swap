@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 18:38:22 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 15:54:41 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"
+#include "../bonus/checker.h"
 
 void	ra(t_list *groot)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 04:05:59 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 15:53:14 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../bonus/checker.h"
 
 void	ft_error(void)
 {

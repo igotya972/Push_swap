@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parsing_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 21:44:41 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 15:55:18 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../bonus/checker.h"
 
 t_list	*initialization(void)
 {

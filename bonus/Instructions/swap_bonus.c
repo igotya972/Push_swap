@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   swap_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 18:37:54 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 15:54:45 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"
+#include "../bonus/checker.h"
 
 void	sa(t_list *groot)
 {
