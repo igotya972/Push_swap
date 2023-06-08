@@ -6,7 +6,7 @@
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 18:32:43 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/02 19:36:09 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_element	*ft_index_min(t_list *groot)
 
 	i = 0;
 	tmp = NULL;
-	new = groot->pile_a;
+	new = groot->a;
 	while (new)
 	{
 		if (new->index == 0 && (i == 0 || tmp->value > new->value))
@@ -53,8 +53,8 @@ t_element	*ft_index_big_value(t_list *groot)
 	t_element	*tmp;
 	t_element	*new;
 
-	tmp = groot->pile_a;
-	new = groot->pile_a->next;
+	tmp = groot->a;
+	new = groot->a->next;
 	while (new)
 	{
 		if (new->index > tmp->index)

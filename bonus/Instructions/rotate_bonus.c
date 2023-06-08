@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 18:38:22 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 19:24:03 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@ void	ra(t_list *groot)
 	t_element	*tmp;
 	t_element	*first;
 
-	if (groot->pile_a && groot->pile_a->next)
+	if (groot->a && groot->a->next)
 	{
-		tmp = groot->pile_a;
-		groot->pile_a = groot->pile_a->next;
-		first = groot->pile_a;
-		while (groot->pile_a->next)
+		tmp = groot->a;
+		groot->a = groot->a->next;
+		first = groot->a;
+		while (groot->a->next)
 		{
-			groot->pile_a = groot->pile_a->next;
+			groot->a = groot->a->next;
 		}
-		groot->pile_a->next = tmp;
+		groot->a->next = tmp;
 		tmp->next = NULL;
-		groot->pile_a = first;
+		groot->a = first;
 	}
 }
 

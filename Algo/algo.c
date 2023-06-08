@@ -6,7 +6,7 @@
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 08:32:01 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/08 01:09:27 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 01:58:47 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@ void	ft_short_algo(t_list *groot)
 	t_element	*big_value;
 
 	big_value = ft_index_big_value(groot);
-	if (big_value->index == groot->pile_a->index)
+	if (big_value->index == groot->a->index)
 	{
 		ra(groot);
-		if (groot->pile_a->index > groot->pile_a->next->index)
+		if (groot->a->index > groot->a->next->index)
 			sa(groot);
 	}
-	else if (big_value->index == groot->pile_a->next->index)
+	else if (big_value->index == groot->a->next->index)
 	{
 		rra(groot);
-		if (groot->pile_a->index > groot->pile_a->next->index)
+		if (groot->a->index > groot->a->next->index)
 			sa(groot);
 	}
-	if (groot->pile_a->index > groot->pile_a->next->index)
+	if (groot->a->index > groot->a->next->index)
 	{
 		sa(groot);
 	}
@@ -37,28 +37,28 @@ void	ft_short_algo(t_list *groot)
 
 void	ft_short_algo2(t_list *groot)
 {
-	t_element	*big_v;
+	t_element	*v;
 	int			pos;
 	int			i;
 
-	big_v = ft_index_big_value(groot);
-	while (groot->pile_a->next->next)
+	v = ft_index_big_value(groot);
+	while (groot->a->next->next)
 	{
-		if (big_v->index == groot->pile_a->index || big_v->index - 1 == groot->pile_a->index)
+		if (v->index == groot->a->index || v->index - 1 == groot->a->index)
 			ra(groot);
 		else
 			pb(groot);
 	}
-	if (groot->pile_a->index > groot->pile_a->next->index)
+	if (groot->a->index > groot->a->next->index)
 		sa(groot);
 	while (groot->pile_b != NULL)
 	{
-		big_v = ft_index_big_value_b(groot);
-		pos = ft_pos_big_value(groot, big_v);
+		v = ft_index_big_value_b(groot);
+		pos = ft_pos_big_value(groot, v);
 		i = ft_lstsize(groot->pile_b);
-		while (pos < i && big_v->index != groot->pile_b->index)
+		while (pos < i && v->index != groot->pile_b->index)
 			rb(groot);
-		while (pos >= i && big_v->index != groot->pile_b->index)
+		while (pos >= i && v->index != groot->pile_b->index)
 			rrb(groot);
 		pa(groot);
 	}
@@ -70,10 +70,10 @@ void	ft_algo_choice(t_list *groot)
 	int			i;
 
 	big_value = ft_index_big_value(groot);
-	i = ft_lstsize(groot->pile_a);
+	i = ft_lstsize(groot->a);
 	if (big_value->index == 2)
 	{
-		if (big_value->index > groot->pile_a->index)
+		if (big_value->index > groot->a->index)
 			sa(groot);
 	}
 	if (i == 1)

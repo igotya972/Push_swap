@@ -6,7 +6,7 @@
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 15:15:02 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/08 00:00:23 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct s_element
 
 typedef struct s_list
 {
-	struct s_element	*pile_a;
+	struct s_element	*a;
 	struct s_element	*pile_b;
 }						t_list;
 

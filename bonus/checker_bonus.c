@@ -6,7 +6,7 @@
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 21:44:34 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/08 01:03:46 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 01:47:51 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	main(int ac, char **av)
 	line = get_next_line(0);
 	while (line)
 	{
-		ft_print_instructions(groot, line);
+		ft_exec_instructions(groot, line);
 		free (line);
 		line = get_next_line(0);
 	}

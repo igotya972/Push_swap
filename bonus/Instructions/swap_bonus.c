@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 18:37:54 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 19:23:34 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void	sa(t_list *groot)
 {
 	t_element	*tmp;
 
-	if (groot->pile_a && groot->pile_a->next)
+	if (groot->a && groot->a->next)
 	{
-		tmp = groot->pile_a->next;
-		groot->pile_a->next = groot->pile_a->next->next;
-		tmp->next = groot->pile_a;
-		groot->pile_a = tmp;
+		tmp = groot->a->next;
+		groot->a->next = groot->a->next->next;
+		tmp->next = groot->a;
+		groot->a = tmp;
 	}
 }
 

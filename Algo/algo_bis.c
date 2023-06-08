@@ -6,7 +6,7 @@
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 19:41:45 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 05:31:21 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ void	ft_mid_tri(t_list *groot)
 
 void	ft_algo(t_list *groot, int limit)
 {
-	while (groot->pile_a)
+	while (groot->a)
 	{
-		if (groot->pile_a->index < limit)
+		if (groot->a->index < limit)
 		{
 			pb(groot);
 			limit++;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 04:05:59 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 19:39:46 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ void	ft_check_sorted_list(t_list *groot)
 	t_element	*tmp;
 	t_element	*new;
 
-	tmp = groot->pile_a;
-	new = groot->pile_a->next;
+	tmp = groot->a;
+	new = groot->a->next;
 	while (new)
 	{
 		if (new->value > tmp->value)
@@ -93,8 +93,8 @@ void	ft_check_double(t_list *groot)
 	t_element	*new;
 	int			i;
 
-	tmp = groot->pile_a;
-	new = groot->pile_a;
+	tmp = groot->a;
+	new = groot->a;
 	i = 0;
 	while (new)
 	{
@@ -111,7 +111,7 @@ void	ft_check_double(t_list *groot)
 				tmp = tmp->next;
 		}
 		i = 0;
-		tmp = groot->pile_a;
+		tmp = groot->a;
 		new = new->next;
 	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dferjul <dferjul@student.42.fr>            +#+  +:+       +#+        */
+/*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 21:44:41 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/07 19:43:00 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*initialization(void)
 	t_list		*list;
 
 	list = malloc(sizeof(*list));
-	list->pile_a = NULL;
+	list->a = NULL;
 	list->pile_b = NULL;
 	return (list);
 }
@@ -33,15 +33,15 @@ void	insert_element(t_list *groot, int newValue)
 	new->value = newValue;
 	new->next = NULL;
 	new->index = 0;
-	if (groot->pile_a)
+	if (groot->a)
 	{
-		n = groot->pile_a;
+		n = groot->a;
 		while (n->next != NULL)
 			n = n->next;
 		n->next = new;
 	}
 	else
-		groot->pile_a = new;
+		groot->a = new;
 }
 
 void	ft_parse_arguments(t_list *groot, int ac, char **av)

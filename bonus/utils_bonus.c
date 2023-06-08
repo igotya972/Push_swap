@@ -6,7 +6,7 @@
 /*   By: dferjul <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 06:48:55 by dferjul           #+#    #+#             */
-/*   Updated: 2023/06/08 00:11:20 by dferjul          ###   ########.fr       */
+/*   Updated: 2023/06/08 01:54:48 by dferjul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	ft_is_sorted(t_list *groot)
 	t_element	*tmp;
 	t_element	*new;
 
-	if (groot->pile_a->next == NULL)
+	if (groot->a->next == NULL)
 		return (1);
-	tmp = groot->pile_a;
-	new = groot->pile_a->next;
+	tmp = groot->a;
+	new = groot->a->next;
 	while (new)
 	{
 		if (new->value > tmp->value)
@@ -40,10 +40,10 @@ void	ft_free_groot(t_list *groot)
 {
 	t_element	*tmp;
 
-	while (groot->pile_a)
+	while (groot->a)
 	{
-		tmp = groot->pile_a;
-		groot->pile_a = groot->pile_a->next;
+		tmp = groot->a;
+		groot->a = groot->a->next;
 		free(tmp);
 	}
 	while (groot->pile_b)
